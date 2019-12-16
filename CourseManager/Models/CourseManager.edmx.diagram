@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7f8283e3463a455ea8327c2d0920872a" Name="Diagram1">
+        <EntityTypeShape EntityType="CoursemanagerModel.Classes" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoursemanagerModel.teachers" Width="1.5" PointX="3.375" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoursemanagerModel.Students" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="CoursemanagerModel.CourseManagements" Width="1.5" PointX="3.375" PointY="3.75" />
+        <EntityTypeShape EntityType="CoursemanagerModel.Courses" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="CoursemanagerModel.Actionlink" Width="1.5" PointX="5.375" PointY="3.75" />
+        <EntityTypeShape EntityType="CoursemanagerModel.Sidebar" Width="1.5" PointX="0.75" PointY="6.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,70 @@
+﻿@model CourseManager.Models.CourseManagements
+@using CourseManager.Models
+@{
+    ViewBag.Title = "Create";
+    var classes = (List<Classes>)ViewBag.classes;
+    var teachers = (List<teachers>)ViewBag.teachers;
+    var courses = (List<Courses>)ViewBag.courses;
+}
+<h2>Create</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>CourseManagements</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.ClassId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <select name="ClassId" class="form-control">
+                    @foreach (var Classes  in classes )
+                     {
+                        <option value="@Classes.Id">@Classes.Name</option>
+                     }
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CourseId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <select name="CourseId" class="form-control">
+                    @foreach (var Coures in courses)
+                     {
+                        <option value="@Coures.Id">@Coures.Name</option>
+                     }
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TeacherId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <select name="TeacherId" class="form-control">
+                    @foreach (var Teachers in teachers)
+                     {
+                        <option value="@Teachers.Id">@Teachers.Name</option>
+                     }
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
